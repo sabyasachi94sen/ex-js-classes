@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style>
+    pre{
+        font-size: 1rem;
+    }
+
+        </style>
+        <title>
+
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      
+      <h3>What is Hoisting?</h3>
+
+      <p>Hoisting is a mechanism using which JS Engine moves all the varialbles and function declarations in the top of the scope and also assign values undefined to them just before execution.</p>
+       <pre >
+        Ex:
+
+        Input: 
+        a=2;
+        console.log(sum(2,3));
+        console.log(a); 
+        function sum(a,b){
+        return a+b;
+        }
+        var a;
+    
+        Output: 
+        5
+        2
+       </pre>
+
+       <h3>What are the types of variables in JS?</h3>
+
+       <pre>
+       There are 3 types of variables in JS,they are:
+
+       1. Var 
+       2. let
+       3. const
+
+       Var: 
+       Var is a global scope variable.
+       Var can reassigned.
+       Var can be redeclared.
+       Var can be modified later.
+
+       let:
+       let is a block scope.
+       let cannot be reassigned.
+       let cannot be redeclared.
+       let can be modified later.
+       
+       const: 
+       const is a block scope.
+       const cannot be reassigned.
+       canst cannot be redeclared.
+       const cannot be modified later.
+
+
+       </pre>
+
+       <h3>What are closures?</h3>
+
+       <p>Any function maintaining lexical scoping is called as closures.Here the function will try to access the variables in local scope,if they dont find it then it will search it in the outer scope and still if it fails to find it will search in gloabl scope and finally if it is not found then it will return undefined.</p>
+      
+      
+      
+      <script src="" async defer></script>
+
+
+
+    </body>
+</html>
