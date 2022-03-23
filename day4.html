@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>Print age using ternary operator?</h3>
+
+        <pre>
+            I/p: 
+            var age=29;
+            var str=(age<30)? "Adult": "Old";
+            console.log(str);
+
+            O/p:
+            Adult
+        </pre>
+
+
+        <h3>Print age using if/else operator?</h3>
+
+        <pre>
+            I/p: 
+            var age=29;
+            if(age<15)
+            console.log("Young");
+            else if(age>15 && age<30)
+            console.log("Adult");
+
+            O/p:
+            Adult
+        </pre>
+
+        <h3>Print week calender using Switch Case?</h3>
+
+        <pre>
+
+            I/p: 
+
+            var day="monday";
+            switch(day){
+                case "monday": console.log("0");
+                break;
+                case "tuesday": console.log("1");
+                break;
+                case "wednesday": console.log("2");
+                break;
+                case "thursday": console.log("3");
+                break;
+                case "friday": console.log("4");
+                break;
+                case "saturday": console.log("5");
+                break;
+                case "sunday": console.log("6");
+                break;
+                default: console.log("not a valid day")
+            }
+
+            O/p:
+            0
+        </pre>
+
+        <h3>What is Hoisting?</h3>
+
+        <p>Hoisting is a mechanism using which JS Engine moves all the varialbles and function declarations in the top of the scope and also assign values undefined to them just before execution.</p>
+        <p>Note: Only declarations are hoisted not initialization.</p>
+        
+       
+    </body>
+</html>
