@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h3>What are the types of variables in JS?</h3>
+
+        <pre>
+        There are 3 types of variables in JS,they are:
+ 
+        1. Var 
+        2. let
+        3. const
+ 
+        Var: 
+        Var is a global scope variable.
+        Var can reassigned.
+        Var can be redeclared.
+        Var can be modified later.
+ 
+        let:
+        let is a block scope.
+        let cannot be reassigned.
+        let cannot be redeclared.
+        let can be modified later.
+        
+        const: 
+        const is a block scope.
+        const cannot be reassigned.
+        canst cannot be redeclared.
+        const cannot be modified later.
+ 
+ 
+        </pre>
+
+
+        <h3>What is Execution in Javascript?</h3>
+
+      <p>Javascript execution context is divided into two parts:</p>
+      <p>1. Creation Phase</p>
+      <p>2. Execution Phase</p>
+
+
+      <h3>Creation Phase :</h3>
+
+      <p>This is the initial phase of Global execution content.Here all variables and functions are given memory allocation ie. stored in heap memory and values assigned as undefined.The global execution context is pushed into the callstack and it remains there until all the code gets executed.After complete execution global execution context gets popped from callstack.</p>
+
+      <h3>Execution Phase :</h3>
+
+      <p>This is the final phase of global execution context.Here code is executed line by line and the original values are assigned to the variables and to the functions at this stage.
+          When function gets executed a seperate execution context gets executed ie. function execution which is pushed into the stack ie. at the top of the global execution context.Here the code inside the function gets excuted.
+          After the execution of the function the function execution context gets popped out of the callstack and the rest of the code gets excuted.
+     
+     
+        </p>
+
+        <img src="https://cpentalk.com/?qa=blob&qa_blobid=6137021251521763964" alt="Global execution context" style="width:50%">
+
+      
+        <h3>Print age using ternary operator?</h3>
+
+        <pre>
+            I/p: 
+            var age=29;
+            var str=(age<30)? "Adult": "Old";
+            console.log(str);
+
+            O/p:
+            Adult
+        </pre>
+
+
+        <h3>Print age using if/else operator?</h3>
+
+        <pre>
+            I/p: 
+            var age=29;
+            if(age<15)
+            console.log("Young");
+            else if(age>15 && age<30)
+            console.log("Adult");
+
+            O/p:
+            Adult
+        </pre>
+
+        <h3>Print week calender using Switch Case?</h3>
+
+        <pre>
+
+            I/p: 
+
+            var day="monday";
+            switch(day){
+                case "monday": console.log("0");
+                break;
+                case "tuesday": console.log("1");
+                break;
+                case "wednesday": console.log("2");
+                break;
+                case "thursday": console.log("3");
+                break;
+                case "friday": console.log("4");
+                break;
+                case "saturday": console.log("5");
+                break;
+                case "sunday": console.log("6");
+                break;
+                default: console.log("not a valid day")
+            }
+
+            O/p:
+            0
+        </pre>
+
+        <h3>What is Hoisting?</h3>
+
+        <p>Hoisting is a mechanism using which JS Engine moves all the varialbles and function declarations in the top of the scope and also assign values undefined to them just before execution.</p>
+        <p>Note: Only declarations are hoisted not initialization.</p>
+        
+       <h3>Print the table of 13 using loop?</h3>
+       <pre>
+           for(var i=1;i<=13;i++){
+               console.log("13 * "+i+" = "+13*i);
+           }
+       </pre>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
