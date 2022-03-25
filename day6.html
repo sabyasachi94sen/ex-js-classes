@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <h3>What is Function?</h3>
+
+      <p>Function is a block of code which is excuted for a particular task.Here we write the code once and can use it multiple times.</p>
+        
+         <h3>What is Function declaration?</h3>
+
+         <p>Function declaration defines a function with specified parameters.Here we have to give function name.Function declarations are hoisted.</p>
+         <pre>
+             Ex:
+
+             function add(a,b);
+             {
+                 return a+b;
+             }
+
+             console.log(add(2,3));
+         </pre>
+     
+         <h3>What is function Expression</h3>
+
+         <p>Function Expression is similar to function declaration but here the function name is ommited.Function expression are not hoisted since during hoisting it treats it as a function variable.</p>
+         <pre>
+             Ex: 
+             const add=function(a,b){
+                 return a+b;
+
+             }
+
+             console.log(add(2,3));
+         </pre>
+
+         <h3>What is a constructor function?</h3>
+
+         <p>In Javascript the constructor function is used to create objects.We use cosntructor function by using new keyword</p>
+         <pre>
+             Ex:
+
+             const add=new Function("a","b","return a+b");
+              console.log(add(2,3));
+
+         </pre>
+
+         <h3>What is IIFE?</h3>
+         <p>IIFE is immediately invoked function expression which gets exceuted as soon as it is created.It is basically a anonymous function which can be executed only once.</p>
+         <pre>
+             (function(){
+                 console.log("this is a anonymous function");
+             })();
+         </pre>
+
+         <h3>What is a first class function?</h3>
+
+         <p>First class function is function which can be passed as an argument inside a another function or it can be returned by a function or it can assigned as a value to another function.</p>
+         <pre>
+             Ex:
+             function sum(a,b){
+                return a+b;
+            }
+            
+            function sumCall(sum){
+            
+               return sum(2,3);
+            }
+            
+            console.log(sumCall(sum));
+
+            //Here sum is a first class function
+         </pre>
+
+         <h3>What is a callback function?</h3>
+
+         <p>Callback function is a function which can be passed as an argument to another function.</p>
+         <pre>
+             Ex:
+
+             function sum(a,b)
+             {
+              console.log("sum"+a+b);
+             }
+
+             function sumCall(sum){
+                 sum(2,3);
+             }
+
+             sumCall(sum);
+
+             // Here sum is a callback function;
+         </pre>
+
+         <h3>What is a higher order function?</h3>
+         <p>Higher order function is a function which can accept a function as a parameter or return a function.</p>
+
+         <pre>
+             Ex:
+
+             function sum(a,b)
+             {
+              console.log("sum"+a+b);
+             }
+
+             function sumCall(sum){
+                 sum(2,3);
+             }
+
+             sumCall(sum);
+
+             // Here sumCall is a higher order function
+
+         </pre>
+
+         <h3>What are closures?</h3>
+
+         <p>Any function maintaining lexical scoping is called as closures.Here the function will try to access the variables in local scope,if they dont find it then it will search it in the outer scope and still if it fails to find it will search in global scope and finally if it is not found then it will return undefined.</p>
+        <pre>
+            Ex:
+            var x=2;
+            function a(){
+                console.log(x);
+            }
+        </pre>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
