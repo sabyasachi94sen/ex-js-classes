@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+    
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>What is an array?</h3>
+
+        <p>Array is a data structure which consists of collection of elements.This elements can be accessed by individual index or keys.</p>
+
+
+        <pre>
+           I/p:
+            var arr=[1,2,3,4];
+            var len=arr.length;
+            for(var i = 0;i < len; i++)
+            console.log(arr[i]+" ")
+
+            O/p:
+            1 2 3 4
+        </pre>
+
+        <h3>What is a Map in JS?</h3>
+
+        <p>Map is array method which is used to transform an array.It calls the a callback function for every element and iterate through the array from beginning to end.
+
+        <pre>
+            I/p:
+            var arr=[1,2,3,4];
+            arr.map((currentVal,index,arr)=>{
+                console.log(currentVal+" ");
+            })
+
+            O/p:
+            1 2 3 4
+        </pre>
+
+        <h3>What is a filter?</h3>
+        <p>Filter is a array method which is used to filter out the partcular data from the array according to the given condition and returns a new array.</p>
+        <pre>
+
+            I/p:
+
+            var arr=[1,2,3,4];
+            var data=arr.filter((currentVal)=>currentVal>1);
+            console.log(data);
+
+            O/p:
+            2 3 4
+
+        </pre>
+        <h3>What is a reduce?</h3>
+        <p>Reduce is a array method which calls a callback function for each element and finally returns a single value ie. accumulated value.</p>
+
+        <pre>
+            I/p:
+            var arr=[1,2,3,4];
+            var result=arr.reduce((total,currentVal,index)=>{
+                total+=currentVal;
+                return total;
+            },0)
+            console.log(result);
+
+            O/p:
+            10
+        </pre>
+
+        <h3>What is push method in JS?</h3>
+
+        <p>Push is array method used to append data into the end of the array.</p>
+        <pre>
+            I/p:
+            var arr=[1,2,3];
+            arr.push(4);
+            console.log(arr);
+
+            O/p:
+            1 2 3 4
+
+        </pre>
+
+        <h3>What is a pop method in JS?</h3>
+
+        <p>Pop is a array method which is used to remove the last element of the array.</p>
+        <pre>
+            I/p:
+            var arr=[1,2,3];
+            arr.pop();
+            console.log(arr);
+
+            O/p:
+            1 2
+        </pre>
+
+        <h3>What is unshift method in JS?</h3>
+        <p>Unshift is a array method to add item in the beginning of the array.</p>
+        <pre>
+            I/p:
+            var arr=[2,3,4];
+            arr.unshift(1);
+            console.log(arr);
+
+            O/p:
+            1 2 3 4
+
+
+        </pre>
+
+     <h3>What is shift method is JS?</h3>
+     <p>Shift is array method which is used to remove the first element in the array.</p>
+
+     <pre>>
+      I/p:
+      var arr=[1,2,3];
+      arr.shift();
+      console.log(arr);
+
+      O/p:
+      2 3
+
+     </pre>
+
+     <h3>What is Some method in JS?</h3>
+     <p>Some is a array method which returns true if single element satisfies the condition else returns false.</p>
+
+     <pre>
+         I/p:
+         var arr=[1,2,3,4];
+         var data=arr.some((val)=>val>1)
+         console.log(data);
+
+         O/p:
+         true
+
+     </pre>
+
+     <h3>What is Every method in JS?</h3>
+
+     <p>Every is s array method which returns true if every element satisfies the condition else returns false.</p>
+
+     <pre>
+         I/p:
+
+         var arr=[1,2,3,4];
+         var data=arr.every((val)=>val>1)
+         console.log(data);
+
+         O/p:
+         false
+
+     </pre>
+
+     <h3>What is slice method in JS?</h3>
+    <p>Slice is a array method which returns selected elements from the array as per the starting index and end index.</p>
+
+    <pre>
+        I/p:
+        var arr=[1,2,3,4];
+        var data=arr.slice(0,3);
+        console.log(data);
+
+        O/p:
+        1 2 3
+    </pre>
+
+    <h3>What is IndexOf method in JS?</h3>
+    <p>IndexOf is a array method which returns the the index of the array element.</p>
+
+    <pre>
+        I/p:
+        var arr=[1,2,3];
+        var data=arr.indexOf(1);
+        console.log(data);
+
+        O/p:
+        0
+    </pre>
+        <script src="" async defer></script>
+    </body>
+</html>
