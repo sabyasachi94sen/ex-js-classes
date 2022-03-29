@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>What is length in string?</h3>
+        <p>Length in a string tells the length of the string ie. how many characters are present in the string</p>
+
+        <pre>
+            I/p:
+            var str="hello";
+            console.log(str.length);
+
+            O/p: 
+            5
+        </pre>
+
+        <h3>what is charAt in string?</h3>
+
+        <p>charAt returns the character of the specified index</p>
+
+        <pre>
+            I/p: 
+            var str="hello"
+            console.log(charAt(1));
+
+            O/p: 
+            e
+        </pre>
+
+        <h3>What is indexOf in string?</h3>
+        <p>indexOf is a method used to return the index of the character in a string.</p>
+        <pre>
+            I/p: 
+            var str="hello";
+            console.log(str.indexOf("e"));
+
+            O/p: 
+            1
+        </pre>
+
+        <h3>What is split in string?</h3>
+        <p>split method returns the array of substrings.</p>
+
+        <pre>
+            I/p:
+            var str="hello";
+            var data=str.split("");
+            console.log(data);
+
+            O/p:
+            data[0]: "h"
+            data[1]: "e"
+            data[2]: "l"
+            data[3]: "l"
+            data[4]: "o"
+        </pre>
+        <h3>What is string reverse in string?</h3>
+        <p>string reverse is uses to reverse the original string.</p>
+
+        <pre>
+            I/p:
+            var str="hello";
+            var arr=str.split("");
+            var revArr=arr.reverse();
+            var revArr=revArr.join("");
+            console.log(revArr);
+
+            O/p: 
+            olleh
+        </pre>
+
+        <h3>What is join method in array?</h3>
+        <p>It will join array of individual characters to a single string</p>
+
+        <pre>
+            I/p: 
+            var arr=["h","e","l","l","o"];
+            var newArr=arr.join("");
+            console.log(newArr);
+
+            O/p: 
+            hello
+        </pre>
+
+        <h3>What is trim in string?</h3>
+        <p>trim is a method to remove white spaces in a string.</p>
+
+        <pre>
+            I/p: 
+            var str="hello  ";
+            var newStr=str.trim();
+            console.log(newStr.length);
+            console.log(str.length);
+
+            O/p: 
+            5
+            7
+
+
+        </pre>
+
+        <h3>What is slice in string?</h3>
+        <p>slice is method in string is used to extract the part of the string and it does not modify the original string.</p>\
+
+        <pre>
+            I/p: 
+            var str="hello";
+            var newStr=str.slice(0,3);
+            console.log(newStr);
+
+            O/p: 
+            hel
+
+        </pre>
+
+        <h3>What is splice in string?</h3>
+
+        <p>Splice is a method used to add/remove array elements.It also modifies the original original.</p>
+        
+        
+        <pre>
+            I/p: 
+
+            Add elemnts:
+            var arr=["hello","hogwards","harry","potter"];
+            arr.splice(3,0,"dumbledore");
+            console.log(arr);
+
+            O/p: 
+            ['hello', 'hogwards', 'harry', 'dumbledore', 'potter'];
+
+            I/p:
+
+            Remove elements:
+
+            I/p: 
+            var arr=["hello","hogwards","harry","potter"];
+            arr.splice(0,1);
+            console.log(arr);
+
+            O/p: 
+            ['hogwards', 'harry', 'potter']
+            </pre>
+
+            <h3>What is concatenation in string?</h3>
+
+            <p>concatenation is a method is used to add two string to make a single string.</p>
+
+            <pre>
+                I/p: 
+                var str1="hello";
+                var str2="world";
+                 var str3=str1.concat(" "+str2);
+                console.log(str3);
+
+                O/p: 
+                hello world
+            </pre>
+
+            <h3>What is replace in string?</h3>
+            <p>Replace is method which only replaces the first string in the original string.</p>
+
+            <pre>
+                I/p: 
+                var str="hello world world";
+                var str=str.replace("world","earth");
+                console.log(str);
+
+                O/p: 
+                hello earth world
+            </pre>
+
+            <h3>What is replaceAll in string?</h3>
+
+            <p>replaceAll is a method which replaces all occurences of a string in the original string.</p>
+
+            <pre>
+                I/p: 
+                var str="hello world world";
+                var str=str.replace("world","earth");
+                console.log(str);
+
+                O/p: 
+                hello earth earth
+            </pre>
+
+            <h3>What is toLowerCase in string?</h3>
+            <p>toLowercase in a string is a method which converts the uppercase string to lowercase string.</p>
+
+            <pre>
+                I/p: 
+                var str="HeLLo";
+                str=str.toLowerCase();
+                console.log(str);
+
+                O/p: 
+                hello
+            </pre>
+
+            <h3>What is a toUpperCase in string?</h3>
+
+            <p>toUpperCase is a method which converts the lowercase string to uppercase string.</p>
+
+            <pre>
+                I/p: 
+
+                var str="hello";
+                str=str.toUpperCase();
+                console.log(str);
+
+                O/p: 
+                HELLO
+
+            </pre>
+        <script src="" async defer></script>
+    </body>
+</html>
