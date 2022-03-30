@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>What is a object in JS?</h3>
+        <p>Object is a no primitive datatype which stores information as a key value pair</p>
+
+        <p>
+            Ex:
+
+            var obj={
+                name: "vivek",
+                age: 24,
+                graduation: "b.tech"
+            }
+        </p>
+
+        <h3>what are the different ways to create objects in JS?</h3>
+
+        <p>There are 4 ways to create objects in JS :</p>
+        <ul>
+            <li>Object using constructor.</li>
+            <li>Object using object literal.</li>
+            <li>Object using function constructor.</li>
+            <li>Object using Object.create method</li>
+        </ul>
+
+        <h3>Object using constructor</h3>
+        <pre>
+            var obj=new Object();
+            obj.name="rahul";
+            obj.age="23";
+            obj.graduation="bba"
+        </pre>
+
+        <h3>Object using object literal</h3>
+        <pre>
+            var obj={
+                name: "vivek",
+                age: 24,
+                graduation: "b.tech"
+            }
+        </pre>
+
+        <h3>Object using function constructor</h3>
+        <pre>
+             function sum(a,b){
+                this.a=a;
+                this.b=b;
+                return a+b;
+            }
+
+            var sum1=new sum(2,3);
+            var sum2=new sum(4,5);
+           </pre>
+
+        <h3>Object using Object.create method: This method allows us to create a new object using existing object as the prototype of the newly created object. </h3>
+        
+        <pre>
+            var obj={
+                name: "ajay",
+                age: 45,
+                graduation : "bca"
+            }
+
+            var newObj=Object.create(obj);
+        </pre>
+
+        <h3>What is object keys and value properties in JS?</h3>
+        <p>Object keys is a object property which returns all the keys of the object.</p>
+
+        <pre>
+            I/p: 
+            var obj={
+                name: "ajay",
+                age: 45,
+                graduation : "bca"
+            }
+
+            console.log(Object.keys(obj));
+
+            O/p: 
+            [name,age,graduation]
+        </pre>
+
+        <p>Object values is a object property which returns all the values of the object.</p>
+        <pre>
+            I/p: 
+            var obj={
+                name: "ajay",
+                age: 45,
+                graduation : "bca"
+            }
+
+            console.log(Object.values(obj));
+
+            O/p: 
+            [ajay,45,bca]
+        </pre>
+
+        <h3>What is a spread operator?</h3>
+        <p>Spread operator is used to unpack values from array expressions,string or object with more than 0 arguments or elements are expected.</p>
+        
+        <pre>
+            I/p: 
+
+            var obj={
+                name: "deepak",
+                age: 22
+            }
+
+            var obj1={
+                ...obj,
+                graduation: bba
+            }
+            console.log(obj1);
+
+            O/p:
+
+            obj1={
+                name: "deepak",
+                age: 22,
+                graduation: bba
+            }
+        </pre>
+
+        <h3>What is this keyword in JS?</h3>
+        <p>This keyword points to the current object ie. most of the time it points to the global object only means the window object.</p>
+
+        <pre>
+            I/p: 
+            var obj={
+                name: "rahul",
+                age: 34,
+                printDetails: function(){
+                    console.log("name="+this.name+" and age"+this.age)
+                }
+            }
+
+            obj.printDetails();
+
+            O/p: 
+            name=rahul and age=34
+        </pre>
+        <script src="" async defer></script>
+    </body>
+</html>
