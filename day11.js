@@ -32,6 +32,44 @@ var tempArr=tempStr.reverse();
 var revStr=tempArr.join(" ");
 console.log(revStr);
 
+  var obj3=new Object();
+            obj.name="rahul";
+            obj.age="23";
+            obj.graduation="bba";
+
+console.log(obj3);
+
+  var obj4={
+                name: "vivek",
+                age: 24,
+                graduation: "b.tech"
+            }
+  
+  console.log(obj4);
+
+function sum(a,b){
+                this.a=a;
+                this.b=b;
+                return a+b;
+            }
+
+            var sum1=new sum(2,3);
+            var sum2=new sum(4,5);
+   console.log(sum1);
+  console.log(sum2);
+
+
+var obj5={
+                name: "ajay",
+                age: 45,
+                graduation : "bca"
+            }
+
+            var newObj=Object.create(obj5);
+
+console.log(newObj.age);
+
+
 var obj={   //Q6
     name: "vivek",
     salary:"Rs 30000",
