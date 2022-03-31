@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+        <h3>Given array of students marks [23, 45, 67, 78, 91], add 10 in all the elements of an array by using map and forEach function?</h3>
+        
+         <pre>
+             I/p: 
+            var arr=[23,45,67,78,91];  
+
+            arr.forEach((value,index)=>{
+                arr[index]=value+10;
+            })
+            
+            console.log(arr);
+
+            O/p:
+            [33,55,77,88,101]
+         </pre>
+
+         <h3>Given array of student marks [23, 45, 67, 78, 91], find out how many students have got marks less than 65 and return the array?</h3>
+
+         <pre>
+             I/p: 
+            var arr=[23,45,67,78,91];
+
+            var tempArr;
+            
+            tempArr=arr.filter((value)=>value < 65);
+            console.log(tempArr);
+
+            O/p:
+            [23,45]
+         </pre>
+
+         <h3>Return the sum of all the marks of students present in given array [23, 45, 67, 78, 91]?</h3>
+
+         <pre>
+             I/p: 
+             var arr=[23,45,67,78,91]; 
+            var total=arr.reduce((sum,value)=>{ 
+                return sum+=value;
+             },0)
+             
+             console.log(total);
+
+             O/p:
+             304
+
+         </pre>
+
+         <h3> Replace "Peter" with "John" in whole string : Given String : "Peter is a good friend of Mike. Peter is working in a IT company in Australia"?</h3>
+        <pre>
+            I/p:
+
+            var str="Peter is a good friend of mike.Peter is working in an IT company in Australia";
+
+            str=str.replaceAll("Peter","John");
+           console.log(str);
+
+           O/p:
+           John is a good friend of mike.John is working in an IT company in Australia
+        </pre>
+
+        <h3>Reverse a given string "Hello this is me" , result should be "me is this Hello"?</h3>
+        
+        <pre>
+
+            I/p: 
+            var str1="Hello this is me";  
+            var tempStr=str1.split(" ");
+            var tempArr=tempStr.reverse();
+            var revStr=tempArr.join(" ");
+            console.log(revStr);
+
+            O/p:
+            me is this Hello
+        </pre>
+
+        <h3>What are the different ways to create objects in JS?</h3>
+
+        <p>There are 4 ways to create objects in JS :</p>
+        <ul>
+            <li>Object using constructor.</li>
+            <li>Object using object literal.</li>
+            <li>Object using function constructor.</li>
+            <li>Object using Object.create method</li>
+        </ul>
+
+        <h3>Object using constructor</h3>
+        <pre>
+            var obj=new Object();
+            obj.name="rahul";
+            obj.age="23";
+            obj.graduation="bba"
+        </pre>
+
+        <h3>Object using object literal</h3>
+        <pre>
+            var obj={
+                name: "vivek",
+                age: 24,
+                graduation: "b.tech"
+            }
+        </pre>
+
+        <h3>Object using function constructor</h3>
+        <pre>
+             function sum(a,b){
+                this.a=a;
+                this.b=b;
+                return a+b;
+            }
+
+            var sum1=new sum(2,3);
+            var sum2=new sum(4,5);
+           </pre>
+
+        <h3>Object using Object.create method: This method allows us to create a new object using existing object as the prototype of the newly created object. </h3>
+        
+        <pre>
+            var obj={
+                name: "ajay",
+                age: 45,
+                graduation : "bca"
+            }
+
+            var newObj=Object.create(obj);
+        </pre>
+
+        <h3>Create an object contain name age salary as the properties, retrieve key and values in separate arrays?</h3>
+
+        <pre>
+         I/p: 
+         var obj={   
+            name: "vivek",
+            salary:"Rs 30000",
+            age: "24"
+        }
+        
+        console.log(Object.keys(obj));
+        console.log(Object.values(obj));
+
+        O/p: 
+        ['name', 'salary', 'age']
+        ['vivek', 'Rs 30000', '24']
+        
+
+        </pre>
+        <h3>What is call,apply,bind in JS?</h3>
+
+        <p>Call apply bind is basically used to borrow function methods.</p>
+
+        <h3>Call:It borrows the function method and passes the object as an argument</h3>
+        <pre>
+            I/p: 
+            var obj={
+                name: "rahul",
+                age:34,
+                
+            }
+
+            function a(degree){
+                console.log("name is "+this.name+" age is "+this.age+" and degree is "+degree);
+            }
+
+            a.call(obj,"b.tech");
+
+            O/p: 
+            name is rahul age is 34 and degree is b.tech
+        </pre>
+
+        <h3>Apply:It borrows the function method and passes the object as an argument.The only difference is it passes additional argument inside the array.</h3>
+
+        <pre>
+            I/p: 
+            var obj={
+                name: "rahul",
+                age:34,
+                
+            }
+
+            function a(degree){
+                console.log("name is "+this.name+" age is "+this.age+" and degree is "+degree);
+            }
+
+            a.apply(obj,["b.tech"]);
+
+            O/p: 
+            name is rahul age is 34 and degree is b.tech
+        </pre>
+
+
+        <h3>Bind:It borrows the function method and passes the object as an argument and returns a new function ie. copy of that function.</h3>
+        <pre>
+        I/p: 
+        var obj={
+            name: "rahul",
+            age:34,
+            
+        }
+        
+        function a(degree){
+            console.log("name is "+this.name+" age is "+this.age+" and degree is "+degree);
+        }
+        
+        var tempBind=a.bind(obj,"b.tech");
+        tempBind();
+
+        O/p: 
+        name is rahul age is 34 and degree is b.tech
+        </pre>
+
+
+        <h3>What is prototype chain in JS?</h3>
+        <p>Each object has a private property which holds a link to another object called its prototype.That prototype object has a prototype has a prototype of its own and so on until it reaches to null as its prototype.Hence this chain is called prototype chaining.</p>
+        
+        <pre>
+            I/p: 
+            var obj={
+                name: "vivek",
+                age:22
+            }
+
+            console.log(obj.__proto__.proto__);
+
+
+            O/p:
+            null
+        </pre>
+         <script src="./day11.js" async defer></script>
+    </body>
+</html>
