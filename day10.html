@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+        
+                </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>What is this keyword in JS?</h3>
+
+        <p>This keyword points to the current object ie. most of the time it points to global object which is window object.</p>
+
+        <pre>
+            I/p: 
+
+            var obj={
+                name: "vivek",
+                age:22,
+
+                printName:function(){
+                    console.log("name is "+this.name+" and age is "+this.age)
+                }
+            }
+
+            O/p: 
+            name is vivek and age is 22
+        </pre>
+
+        <h3>What is call,apply,bind in JS?</h3>
+
+        <p>Call apply bind is basically used to borrow function methods.</p>
+
+        <h3>Call:It borrows the function method and passes the object as an argument</h3>
+        <pre>
+            I/p: 
+            var obj={
+                name: "rahul",
+                age:34,
+                
+            }
+
+            function a(degree){
+                console.log("name is "+this.name+" age is "+this.age+" and degree is "+degree);
+            }
+
+            a.call(obj,"b.tech");
+
+            O/p: 
+            name is rahul age is 34 and degree is b.tech
+        </pre>
+
+        <h3>Apply:It borrows the function method and passes the object as an argument.The only difference is it passes additional argument inside the array.</h3>
+
+        <pre>
+            I/p: 
+            var obj={
+                name: "rahul",
+                age:34,
+                
+            }
+
+            function a(degree){
+                console.log("name is "+this.name+" age is "+this.age+" and degree is "+degree);
+            }
+
+            a.apply(obj,["b.tech"]);
+
+            O/p: 
+            name is rahul age is 34 and degree is b.tech
+        </pre>
+
+
+        <h3>Bind:It borrows the function method and passes the object as an argument and returns a new function ie. copy of that function.</h3>
+        <pre>
+        I/p: 
+        var obj={
+            name: "rahul",
+            age:34,
+            
+        }
+        
+        function a(degree){
+            console.log("name is "+this.name+" age is "+this.age+" and degree is "+degree);
+        }
+        
+        var tempBind=a.bind(obj,"b.tech");
+        tempBind();
+
+        O/p: 
+        name is rahul age is 34 and degree is b.tech
+        </pre>
+
+        <h3>What is prototype?</h3>
+        <p>Prototype is a mechanism used to inherit features between objects.</p>
+
+        <pre>
+            I/p:
+            var obj={
+                fname: "sabyasachi",
+                lname: "sen"
+            }
+
+            var obj1={
+
+            }
+
+            obj1.__proto__=obj;
+            console.log(obj1.fname+" "+obj1.lname);
+            
+
+            O/p:
+            sabyasachi sen
+            
+        </pre>
+
+        <h3>What is prototype chain in JS?</h3>
+        <p>Each object has a private property which holds a link to another object called its prototype.That prototype object has a prototype has a prototype of its own and so on until it reaches to null as its prototype.Hence this chain is called prototype chaining.</p>
+        
+        <pre>
+            I/p: 
+            var obj={
+                name: "vivek",
+                age:22
+            }
+
+            console.log(obj.__proto__.proto__);
+
+
+            O/p:
+            null
+        </pre>
+        <script src="" async defer></script>
+    </body>
+</html>
