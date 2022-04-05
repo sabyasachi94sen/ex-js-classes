@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>What is DOM manipulation?</h3>
+      <p>DOM stands for document object model.It is basically a tree which is created when the JS engine loads the html document and converts the entire document into a tree like structure.
+          It is used to dynamically update data or style data in the html page.
+      </p>
+
+    <p> Ex: Update data</p>
+      <h4></h4>
+      <button onclick="dataUpdate()">Click</button>
+
+      <p>Ex: Change color of the text</p>
+
+      <h5>Hello world</h5>
+      <button onclick="colorChange()">Click</button>
+
+      <h3>Difference b/w innerText vs innerHMTL</h3>
+      <p>Inner text return only the text of the parent element and its child element</p>
+      <p>innerHTML returns the text and html tag of both parent element and its child element</p>
+
+      Ex:
+
+      <h3 id="in-text">innerText</h3>
+      <button onclick="dataAlert1()">Click</button>
+      <h3 id="in-html" >innerHTML</h3>
+      <button onclick="dataAlert2()">Click</button>
+
+      <h3>How to dynamically create element using DOM?</h3>
+      <p>To create element dynamically using JS we need to use create element function in javascript.</p>
+
+      Ex:
+
+      <div id="container"></div>
+
+      <button onclick="createEle()">Click</button>
+
+
+
+
+
+        
+        <script src="./day12.js"></script>
+    </body>
+</html>
