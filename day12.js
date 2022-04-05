@@ -1,6 +1,6 @@
 function dataUpdate(){
     var data=document.getElementsByTagName("h4");
-    data[0].innerHTML="This is a h4 tag"
+    data[0].innerHTML="Data updated"
 }
 
 
