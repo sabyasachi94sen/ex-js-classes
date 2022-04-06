@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            pre{
+                font-size: 1rem;
+            }
+            .img1{
+                width:50%;
+            }
+            .img2{
+                height: 50vh;
+            }
+        
+                </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h3>What is a setTimeout function?</h3>
+        <p>setTimeout is a asynchronous function which gets executed once the timer expires.It gets executed only when the callstack becomes empty.</p>
+        <pre>
+            Ex:
+              
+            I/p: 
+            
+            console.log("first called")
+
+            setTimeout(()=>{
+                console.log("setTimeout is excuted after 2s")
+            },2000)
+
+            console.log("second called");
+
+            O/p:
+            
+            first called
+            second called
+            setTimeout is excuted after 2s
+           
+
+        </pre>
+
+        <h3>What is a event loop?</h3>
+        <p>
+          Event loop acts as a mediator b/w callstack and callback queue.Event loop is the secret by which javascript gives illusion that it is a multithreaded language whereas it is single threaded.
+          Here the callback function in the event queue has not yet run and is wiating for its time to put into the stack when the callback function will get excuted and webAPI is making the mentioned wait.
+          Hence when the stack gets empty here event loop comes where it takes first event from the callback queue and puts it into the callstack.This cycle is called event loop.
+
+
+
+
+
+
+
+
+
+        </p>
+        <img class="img1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Y1v6aJBu--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/ek7ji4zrimozpp2yzk0a.png" alt="event loop diagram" />
+        
+        <h3>What is closure?</h3>
+        <p>Any function bounded by the lexical environment is called closure.Here it first checks for the reference of the variable in its own scope,if it is not found it tries to find out in the outer scope and if still it is not found it tries to find out in the global scope and finally if it is not found it returns undefined.</p>
+
+        <pre>
+
+            I/p: 
+
+            var b=2;
+
+            function a(){
+                console.log(b)
+            }
+
+            a();
+
+            O/p:
+            2
+        </pre>
+
+
+        <h3>What is callback queue?</h3>
+
+        <p>Callback queue is a data structure which gets ordinary callback functions coming from asynchronous functions such as setTimeout after the times expires.Callback function has a lesser priority than the microtask queue.</p>
+        
+        <img class="img2" src="https://media.geeksforgeeks.org/wp-content/uploads/20210328211825/async1-660x247.png" alt="callback queue diagram" />
+        <script src="" async defer></script>
+    </body>
+</html>
